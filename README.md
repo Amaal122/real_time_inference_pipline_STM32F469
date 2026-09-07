@@ -51,3 +51,4 @@ STM32F469 from a desktop connection.
 
 - STM32CubeIDE / X-CUBE-AI (stedgeai) for model conversion and firmware
 - Python (desktop bridge, HTTP polling, SQLite buffering, UART transmission)
+<img width="1391" height="738" alt="validation" src="https://github.com/user-attachments/assets/c462898b-2ca8-4533-8182-521b946848ea" />
