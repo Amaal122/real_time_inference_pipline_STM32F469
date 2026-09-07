@@ -1,0 +1,33 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+# Toolchain: GNU Tools for STM32 (11.3.rel1)
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../Core/Src/AI/network.c \
+../Core/Src/AI/network_data.c \
+../Core/Src/AI/network_data_params.c 
+
+OBJS += \
+./Core/Src/AI/network.o \
+./Core/Src/AI/network_data.o \
+./Core/Src/AI/network_data_params.o 
+
+C_DEPS += \
+./Core/Src/AI/network.d \
+./Core/Src/AI/network_data.d \
+./Core/Src/AI/network_data_params.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+Core/Src/AI/%.o Core/Src/AI/%.su Core/Src/AI/%.cyclo: ../Core/Src/AI/%.c Core/Src/AI/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F469xx -c -I../Core/Inc -I"C:/Users/bougu/STM32CubeIDE/workspace_1.14.0/NILMstage/TEST/Core/Lib" -I"C:/Users/bougu/STM32CubeIDE/workspace_1.14.0/NILMstage/TEST/Core/Inc/AI" -I"C:/Users/bougu/STM32CubeIDE/workspace_1.14.0/NILMstage/TEST/Core/Inc/AI/Runtime" -I"C:/Users/bougu/STM32CubeIDE/workspace_1.14.0/NILMstage/TEST/Core/Inc/AI/Runtime/Inc" -I"C:/Users/bougu/STM32CubeIDE/workspace_1.14.0/NILMstage/TEST/Core/Src/AI" -I../Utilities/Fonts -I../Drivers/BSP/STM32469I-Discovery -I../Drivers/BSP/Components -I../FATFS/Target -I../FATFS/App -I../USB_HOST/App -I../USB_HOST/Target -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+
+clean: clean-Core-2f-Src-2f-AI
+
+clean-Core-2f-Src-2f-AI:
+	-$(RM) ./Core/Src/AI/network.cyclo ./Core/Src/AI/network.d ./Core/Src/AI/network.o ./Core/Src/AI/network.su ./Core/Src/AI/network_data.cyclo ./Core/Src/AI/network_data.d ./Core/Src/AI/network_data.o ./Core/Src/AI/network_data.su ./Core/Src/AI/network_data_params.cyclo ./Core/Src/AI/network_data_params.d ./Core/Src/AI/network_data_params.o ./Core/Src/AI/network_data_params.su
+
+.PHONY: clean-Core-2f-Src-2f-AI
+

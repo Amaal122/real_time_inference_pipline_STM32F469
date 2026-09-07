@@ -1,0 +1,15 @@
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:103:9:BSP_QSPI_Init	24	static,ignoring_inline_asm
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:151:9:BSP_QSPI_DeInit	8	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:174:9:BSP_QSPI_Read	80	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:220:9:BSP_QSPI_Write	96	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:294:9:BSP_QSPI_Erase_Block	72	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:336:9:BSP_QSPI_Erase_Chip	64	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:376:9:BSP_QSPI_GetStatus	72	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:429:9:BSP_QSPI_GetInfo	16	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:445:9:BSP_QSPI_EnableMemoryMappedMode	72	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:488:13:BSP_QSPI_MspInit	48	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:540:13:BSP_QSPI_MspDeInit	16	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:567:16:QSPI_ResetMemory	72	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:608:16:QSPI_DummyCyclesCfg	88	static,ignoring_inline_asm
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:666:16:QSPI_WriteEnable	96	static
+../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_qspi.c:711:16:QSPI_AutoPollingMemReady	96	static

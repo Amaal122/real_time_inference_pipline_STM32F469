@@ -1,0 +1,28 @@
+# STM32CubeIDE build artifacts
+firmware/**/Debug/
+firmware/**/Release/
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+.metadata/
+.settings/
+
+# Python
+pc-side/__pycache__/
+pc-side/*.pyc
+venv/
+env/
+*.egg-info/
+
+# Databases / test data
+*.sqlite
+*.sqlite3
+*.db
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/

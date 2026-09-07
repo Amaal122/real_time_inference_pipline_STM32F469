@@ -1,0 +1,67 @@
+**le fichier TEST contient le projet sur stm32cubeide** 
+
+( le projet est déjà flashé dans la carte stm32F469 si vous voulez le flasher  de nouveau ;
+
+-dans stm32cubide :- File → Open → sélectionner le dossier TEST
+
+		   -build : build project 
+
+		   -run : run 
+
+)
+
+\-------------------------------------------------------------------------------------------
+
+**le script python mcp\_totale\_serial\_bridge :** 
+
+
+
+\-Collecte périodiquement des mesures électriques via HTTP depuis une source (appelée "MP15 source", probablement un capteur/passerelle Wi-Fi)
+
+\-Calcule 14 features (caractéristiques) pour un modèle de NILM (Non-Intrusive Load Monitoring — désagrégation de charge électrique) basé sur LSTM
+
+\-Envoie ces features normalisées vers une carte STM32F469-DISCO, via UART/série (port COM du ST-Link) et/ou MQTT (relayé par un ESP32 vers l'USART6 du STM32)
+
+\-Journalise localement les données brutes dans un fichier texte
+
+\-Bufferise en SQLite les échantillons non envoyés en cas de coupure du port série
+
+**comment executer ce script :**
+
+**dans le PowerShell :**
+
+\- cd path/to/file/
+
+\-pip install paho-mqtt
+
+
+
+**Option 1 — avec MQTT, sans ST-Link :**
+
+La carte ESP32 doit être branchée au secteur, la carte STM32F4 doit être branchée au secteur, et le PC exécutant le script doit être connecté au wifi synergie Lab.
+
+la commande est :
+
+
+
+>python mcp\_totale\_serial\_bridge.py --host 192.168.31.46 --port 8080   --serial-port  --baudrate 115200 --scalers-constants "path\\tp\\nilm\_v5\_causal\_scalers\_constants.json
+
+
+
+**Option 2 — avec le port série (ST-Link), sans MQTT :**
+
+
+
+La carte ESP32 doit être débranchée du secteur, la carte STM32F4 doit être reliée au PC via câble USB-ST-Link.
+
+la commande est :
+
+> python mcp\_totale\_serial\_bridge.py --host 192.168.31.46 --port 8080   --serial-port COM14 --baudrate 115200 --scalers-constants "Cpath\\to\\nilm\_v5\_causal\_scalers\_constants.json"
+
+**(**il faut verifier le port utilisé  a partir du task manager )
+
+\------------------------------------------------------------------------------------------
+
+Le fichier stm32pipeline contient le code C de la carte ESP32, qui envoie les données via UART à la carte STM32F4. 
+\-------------------------------------------------------------------------------------------
+Le dossier modèle NILM LSTM contient le modèle et tous les fichiers dépendants. 

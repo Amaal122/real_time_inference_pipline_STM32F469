@@ -1,0 +1,83 @@
+{
+  "aggregate": {
+    "type": "StandardScaler",
+    "mean": 303.5499864043965,
+    "scale": 446.55402088976507
+  },
+  "extra_features": {
+    "type": "MinMaxScaler",
+    "columns": [
+      "hour",
+      "minute",
+      "dayofweek",
+      "is_weekend",
+      "is_night",
+      "time_sin",
+      "time_cos",
+      "agg_diff",
+      "agg_roll_mean_1min",
+      "agg_roll_mean_5min",
+      "agg_roll_std_1min",
+      "agg_lag1",
+      "agg_lag5"
+    ],
+    "data_min": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0,
+      -1.0,
+      -272.20496358920377,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "data_max": [
+      23.0,
+      59.0,
+      6.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      286.1661376814827,
+      6300.781557906061,
+      4799.854545261409,
+      710.8967860803722,
+      6409.231420870111,
+      6409.231420870111
+    ]
+  },
+  "targets": {
+    "kettle": {
+      "type": "MinMaxScaler",
+      "data_min": 0.0,
+      "data_max": 3200.0
+    },
+    "fridge": {
+      "type": "MinMaxScaler",
+      "data_min": 0.0,
+      "data_max": 158.00450746335966
+    },
+    "microwave": {
+      "type": "MinMaxScaler",
+      "data_min": 0.0,
+      "data_max": 1556.1961765838112
+    },
+    "laptop": {
+      "type": "MinMaxScaler",
+      "data_min": 0.0,
+      "data_max": 100.0
+    }
+  },
+  "on_thresholds_watts": {
+    "kettle": 2000,
+    "fridge": 5,
+    "microwave": 20,
+    "laptop": 2
+  }
+}

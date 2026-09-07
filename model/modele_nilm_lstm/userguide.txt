@@ -1,0 +1,11 @@
+- Le fichier lstmcausal.py contient le code qui génère le modèle LSTM
+
+- nilm_v5_causal_w49.keras est le modèle généré
+
+- Le fichier local_AI_ready est le fichier Excel qui contient les données des machines dans le labo pour les mois de juillet et août, utilisé pour le fine-tuning du modèle
+
+- nilm_v6b_finetuned.keras est le modèle fine-tuné
+
+- finetunelocal.py est le code Python utilisé pour le fine-tuning
+
+- Le fichier nilm_lstm_fp32.tflite est le fichier .tflite généré à partir du fichier .keras avec le code Python lstmtflite.py, et utilisé par X-CUBE-AI pour générer les fichiers .h et .c du modèle
